@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About- Web Design Resume - Tiffany Hale</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <meta name="author" content="Mrs. Hale">
+    <meta name="description" content="This is the about page for Tiffany Hale's web design resume portfolio.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!--google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<!--font aweson cdn-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="scripts/scripts.js" defer></script>
+</head>
+ <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Didact Gothic", sans-serif;
+            line-height: 1.6;
+            color: #222c33;
+            background-color: #201e26;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(244, 209, 189, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #201e26;
+            color: #9f9f9f;
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(244, 209, 189, 1);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            color: #9f9f9f;
+        }
+
+        header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .content {
+            padding: 60px 40px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            color: #355e8e;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #355e8e;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .section h3 {
+            color: #2c4562;
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .info-card {
+            background: #f4d1bd;
+            padding: 25px;
+            border-radius: 8px;
+            border: 2px solid #355e8e;
+            box-shadow: 0 1px 5px rgba(120, 130, 140, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(53, 94, 142, 0.2);
+        }
+
+        .info-card h4 {
+            color: #355e8e;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .info-card p {
+            color: #222c33;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .design-analysis {
+            background-color: #201e26;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+            color: #9f9f9f;
+        }
+
+        .design-analysis h2 {
+            color: #9f9f9f;
+            border-bottom-color: rgba(159, 159, 159, 0.5);
+        }
+
+        .design-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .design-feature {
+            background: #f4d1bd;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #355e8e;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .design-feature h4 {
+            color: #355e8e;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .design-feature p {
+            color: #222c33;
+            font-size: 0.95em;
+        }
+
+        .key-concepts {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .key-concepts li {
+            padding: 15px;
+            margin: 10px 0;
+            background: #f4d1bd;
+            border-radius: 8px;
+            border-left: 4px solid #355e8e;
+        }
+
+        .key-concepts li strong {
+            color: #2c4562;
+            font-size: 1.1em;
+            font-weight: 700;
+        }
+
+        .highlight-box {
+            background: #f4d1bd;
+            border: 2px solid #355e8e;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 1px 5px rgba(120, 130, 140, 0.06);
+        }
+
+        .highlight-box h4 {
+            color: #355e8e;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .highlight-box p {
+            color: #222c33;
+        }
+
+        .highlight-box strong {
+            color: #2c4562;
+            font-weight: 700;
+        }
+
+        .website-info {
+            background: #f4d1bd;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 2px solid #355e8e;
+        }
+
+        .website-info h3 {
+            color: #355e8e;
+            margin-top: 0;
+        }
+
+        .website-detail {
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+
+        .website-detail strong {
+            color: #2c4562;
+            font-weight: 700;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .color-swatch {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8em;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            border: 2px solid #355e8e;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background-color: #201e26;
+            color: #9f9f9f;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(53, 94, 142, 0.3);
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(53, 94, 142, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .info-grid,
+            .design-features {
+                grid-template-columns: 1fr;
+            }
+
+            .color-palette {
+                justify-content: center;
+            }
+        }
+    </style>
+<body class="about-section">
+ <nav class="nav full-nav">
+            <div>
+                <img src="images/HaleLogo2.png" alt="Class Logo" alt="Class Logo" style="width: 25%;">
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a class="project-nav" href="projects.html">Projects</a>
+            </div>
+        </nav>
+       
+    <main>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Green Valley Community Garden Website - A comprehensive analysis of community-focused web design with nature-inspired aesthetics">
+    <meta name="author" content="Student Portfolio">
+    <title>Green Valley Community Garden - Website Design Showcase</title>
+   
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Green Valley Community Garden</h1>
+            <p class="subtitle">Website Design Project</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Growing Community Together Through Thoughtful Web Design</p>
+        </header>
+
+        <div class="content">
+            <!-- Introduction Section -->
+            <section class="section">
+                <h2>Project Overview</h2>
+                <p>The Green Valley Community Garden website exemplifies how thoughtful web design can support community-building initiatives. This project demonstrates the careful balance between aesthetic appeal and functional communication, creating an online presence that welcomes visitors while clearly presenting the organization's mission, services, and values.</p>
+                
+                <p>The design successfully conveys warmth, sustainability, and community connection through strategic use of earth-tone colors, nature-inspired imagery, and accessible navigation that encourages both exploration and action.</p>
+            </section>
+
+            <!-- Website Details Section -->
+            <div class="website-info">
+                <h3>Website Details</h3>
+                <div class="website-detail"><strong>Organization:</strong> Green Valley Community Garden</div>
+                <div class="website-detail"><strong>Tagline:</strong> "Growing Community Together"</div>
+                <div class="website-detail"><strong>Mission:</strong> A thriving community garden where neighbors become friends and seeds become sustenance</div>
+                <div class="website-detail"><strong>Primary CTA:</strong> "Rent Your Plot Today"</div>
+                <div class="website-detail"><strong>Navigation:</strong> Home, About, Plot Rental, Events, Contact</div>
+                <p style="margin-top: 20px; font-style: italic;">This website serves as the digital gateway for community members to connect with sustainable gardening opportunities and build neighborhood relationships.</p>
+            </div>
+
+            <!-- Core Design Elements Section -->
+            <section class="section">
+                <h2>Core Design Elements</h2>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>🌿 Nature-Inspired Logo</h4>
+                        <p>The sprout icon in the logo immediately communicates growth, sustainability, and organic practices. Simple and recognizable, it establishes brand identity at first glance.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>🎨 Earth-Tone Color Palette</h4>
+                        <p>Sage green and cream create a calming, natural atmosphere that reflects the garden's connection to earth and sustainability. The colors evoke trust and approachability.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>📝 Clear Typography</h4>
+                        <p>Large, serif headlines combine with readable body text to create hierarchy and ensure accessibility. The typography feels both professional and welcoming.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>🔔 Prominent Call-to-Action</h4>
+                        <p>The orange "Rent Your Plot Today" button creates visual contrast against the green background, drawing immediate attention to the primary conversion goal.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>🏛️ Structured Navigation</h4>
+                        <p>Clean, horizontal navigation with subtle hover states makes finding information effortless. The navigation remains fixed and accessible throughout scrolling.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>💬 Engaging Copy</h4>
+                        <p>The tagline "Growing Community Together" and supporting text immediately communicate both literal gardening and metaphorical community building.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>🎯 Icon-Based Features</h4>
+                        <p>Simple, recognizable icons (seedling, tools, people) provide visual anchors for key service areas, making content scannable and memorable.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>📱 Responsive Layout</h4>
+                        <p>The card-based design with flexible grid layout ensures the site works beautifully across desktop, tablet, and mobile devices.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>✨ White Space Usage</h4>
+                        <p>Generous spacing between sections prevents visual overwhelm and creates a breathing, organic feel that mirrors the garden environment itself.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Color Psychology Section -->
+            <section class="section">
+                <h2>Color Psychology & Palette Analysis</h2>
+                <p>The color choices in this design aren't arbitrary—each hue has been strategically selected to evoke specific emotions and support the organization's mission of community connection and sustainable living.</p>
+                
+                <div class="color-palette">
+                    <div class="color-swatch" style="background: linear-gradient(135deg, #5a7a5c 0%, #6b8e6f 100%);">
+                        <span>Sage Green</span>
+                        <span style="font-size: 0.7em;">Nature & Growth</span>
+                    </div>
+                    <div class="color-swatch" style="background: linear-gradient(135deg, #f5f5dc 0%, #faf8f3 100%); color: #2c4562;">
+                        <span>Cream/Beige</span>
+                        <span style="font-size: 0.7em;">Warmth & Calm</span>
+                    </div>
+                    <div class="color-swatch" style="background: linear-gradient(135deg, #d97634 0%, #e88c4a 100%);">
+                        <span>Terra Cotta</span>
+                        <span style="font-size: 0.7em;">Earth & Action</span>
+                    </div>
+                    <div class="color-swatch" style="background: linear-gradient(135deg, #4a6b5a 0%, #5c7d6c 100%);">
+                        <span>Forest Green</span>
+                        <span style="font-size: 0.7em;">Stability</span>
+                    </div>
+                    <div class="color-swatch" style="background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); color: #2c4562;">
+                        <span>White</span>
+                        <span style="font-size: 0.7em;">Clarity & Clean</span>
+                    </div>
+                </div>
+
+                <div class="info-grid" style="margin-top: 30px;">
+                    <div class="info-card">
+                        <h4>🌱 Sage Green (Primary)</h4>
+                        <p>Represents growth, renewal, and environmental consciousness. This muted green is more sophisticated than bright lime, conveying maturity and trustworthiness.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>🏡 Cream/Beige (Background)</h4>
+                        <p>Creates warmth and approachability without the starkness of pure white. Evokes natural, organic materials and provides excellent contrast for text readability.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>🔥 Terra Cotta Orange (CTA)</h4>
+                        <p>The warm orange button creates urgency and action while maintaining the earth-tone aesthetic. It's energizing without being aggressive.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>🌲 Forest Green (Accents)</h4>
+                        <p>Deeper green tones add visual depth and hierarchy, helping to distinguish headers and important text from body content.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>✨ White (Cards/Sections)</h4>
+                        <p>Clean white cards create clear content containers, improving scannability and making the page feel organized and professional.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>🎨 Overall Harmony</h4>
+                        <p>The analogous color scheme (greens with warm earth tones) creates visual cohesion that feels natural and restful—perfect for a garden-focused brand.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Design Philosophy Section -->
+            <section class="design-analysis">
+                <h2>Design Philosophy: Welcoming, Natural, Community-Focused</h2>
+                <p>This website design embodies the principles of community-centered web design, where every element serves to lower barriers to participation and create a sense of belonging. The aesthetic choices reflect the organization's values while maintaining professional credibility.</p>
+
+                <div class="design-features">
+                    <div class="design-feature">
+                        <h4>🤝 Inclusive Design</h4>
+                        <p>The approachable aesthetic and clear language welcome both experienced gardeners and complete beginners, removing intimidation factors common in specialized communities.</p>
+                    </div>
+
+                    <div class="design-feature">
+                        <h4>🌍 Environmental Values</h4>
+                        <p>Earth tones and organic imagery reinforce the organization's commitment to sustainability without needing to explicitly state it—the design itself communicates environmental consciousness.</p>
+                    </div>
+
+                    <div class="design-feature">
+                        <h4>📍 Local Community Focus</h4>
+                        <p>The intimate, neighborly feel of the design positions this as a local initiative rather than a corporate entity, building trust through authenticity.</p>
+                    </div>
+
+                    <div class="design-feature">
+                        <h4>🎯 Clear Purpose</h4>
+                        <p>The hero section immediately communicates who, what, and why—visitors understand the organization's purpose within seconds of landing on the page.</p>
+                    </div>
+
+                    <div class="design-feature">
+                        <h4>💚 Emotional Connection</h4>
+                        <p>Language like "neighbors become friends" and "seeds become sustenance" creates emotional resonance, positioning gardening as relationship-building, not just food production.</p>
+                    </div>
+
+                    <div class="design-feature">
+                        <h4>⚡ Action-Oriented</h4>
+                        <p>Multiple pathways to engagement (rent plot, learn more, join events) ensure visitors can participate at their comfort level.</p>
+                    </div>
+
+                    <div class="design-feature">
+                        <h4>📊 Information Hierarchy</h4>
+                        <p>The three-card layout under "Why Choose Green Valley?" presents information in digestible chunks with clear visual hierarchy through icons, headlines, and body text.</p>
+                    </div>
+
+                    <div class="design-feature">
+                        <h4>🎨 Professional Polish</h4>
+                        <p>Despite the warm, grassroots feel, the design maintains professional standards with consistent spacing, alignment, and typography—building credibility.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 30px;">
+                    <h4>Design Success Factors</h4>
+                    <p>This design succeeds because it authentically represents the organization's values while maintaining usability. The natural aesthetic isn't just decoration—it's integral to communicating what the community garden stands for.</p>
+                    <p style="margin-top: 15px;"><strong>The Balance Achieved:</strong> The site manages to be both professional and approachable, trustworthy yet warm, informative but not overwhelming. This balance is crucial for community organizations that need to appear legitimate to potential donors and partners while remaining accessible to everyday community members.</p>
+                </div>
+            </section>
+
+            <!-- User Experience Section -->
+            <section class="section">
+                <h2>User Experience Strategy</h2>
+                <p>The UX design anticipates multiple user journeys and serves different visitor needs through thoughtful information architecture and clear pathways to action.</p>
+
+                <h3>Primary User Types:</h3>
+                <ul class="key-concepts">
+                    <li><strong>Prospective Gardeners:</strong> Want to know about plot availability, costs, what's included, and how to get started. The "Rent Your Plot Today" CTA and Plot Rental navigation serve them directly.</li>
+                    <li><strong>Community Members:</strong> Curious about getting involved through volunteering or events. The Events and About sections provide connection opportunities.</li>
+                    <li><strong>Experienced Gardeners:</strong> Seeking tool library access, workshops, or community learning. The "Community Support" card speaks to their needs.</li>
+                    <li><strong>First-Time Visitors:</strong> Need quick understanding of what the garden is and why it matters. The hero section and "Why Choose Green Valley?" section answer these questions immediately.</li>
+                </ul>
+
+                <h3>UX Best Practices Demonstrated:</h3>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>Progressive Disclosure</h4>
+                        <p>The homepage presents high-level information with clear pathways to more detailed pages, preventing information overwhelm while ensuring depth is available.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Scannable Content</h4>
+                        <p>Icon-headline-description pattern makes content easy to scan, allowing visitors to quickly assess whether this organization meets their needs.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Visual Hierarchy</h4>
+                        <p>Size, color, and position guide the eye through content in priority order: headline → CTA → features → navigation to deeper content.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Consistent Patterns</h4>
+                        <p>Repeating card layouts, consistent spacing, and predictable navigation create familiarity that reduces cognitive load for users.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Mobile Consideration</h4>
+                        <p>The simple, vertical layout and touch-friendly button sizes ensure the experience translates well to mobile devices where many community members will access it.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Clear Next Steps</h4>
+                        <p>Every section implies or states what users should do next, reducing decision paralysis and abandoned sessions.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Strategy Section -->
+            <section class="section">
+                <h2>Content Strategy & Messaging</h2>
+                <p>The written content demonstrates sophisticated understanding of community marketing and persuasive copywriting while maintaining authentic voice.</p>
+
+                <div class="highlight-box">
+                    <h4>Messaging Analysis</h4>
+                    <ul style="margin-top: 15px; line-height: 2; padding-left: 20px;">
+                        <li><strong>"Growing Community Together"</strong> - Double meaning communicates both literal gardening and community building</li>
+                        <li><strong>"Where neighbors become friends"</strong> - Emphasizes social benefits, not just agricultural ones</li>
+                        <li><strong>"Seeds become sustenance"</strong> - Poetic language elevates gardening to meaningful, purposeful work</li>
+                        <li><strong>"Organic Growing"</strong> - Immediately addresses values-driven gardeners' primary concern</li>
+                        <li><strong>"Tools & Equipment"</strong> - Removes barrier of needing expensive equipment</li>
+                        <li><strong>"Community Support"</strong> - Signals that beginners won't be left alone to figure things out</li>
+                    </ul>
+                </div>
+
+                <h3>Content Strategy Strengths:</h3>
+                <ul class="key-concepts">
+                    <li><strong>Benefit-Focused:</strong> Rather than listing organizational features, the content emphasizes what members gain (community, knowledge, food, equipment access).</li>
+                    <li><strong>Barrier Reduction:</strong> Anticipates concerns (lack of tools, lack of knowledge) and immediately addresses them in the feature cards.</li>
+                    <li><strong>Value Alignment:</strong> Language choices reflect environmental and community values that attract ideal members who'll contribute positively to garden culture.</li>
+                    <li><strong>Action Clarity:</strong> Visitors know exactly what action to take ("Rent Your Plot Today") rather than vague "learn more" language.</li>
+                </ul>
+            </section>
+
+            <!-- Technical Execution Section -->
+            <section class="section">
+                <h2>Technical Execution & Design Skills</h2>
+                <p>Creating this website requires proficiency in multiple web design disciplines and demonstrates solid understanding of modern web development practices.</p>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>Layout & Grid Systems</h4>
+                        <p>The responsive card grid demonstrates understanding of flexible layouts, CSS Grid or Flexbox, and breakpoint design for different screen sizes.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Typography Hierarchy</h4>
+                        <p>Strategic use of font sizes, weights, and spacing creates clear content hierarchy that guides reader attention and improves comprehension.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Color Theory Application</h4>
+                        <p>Successful implementation of analogous color scheme with strategic use of complementary accent color shows understanding of color relationships and psychology.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Iconography</h4>
+                        <p>Consistent icon style and appropriate icon selection enhance communication without cluttering the interface or creating confusion.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Navigation Design</h4>
+                        <p>Clean, accessible navigation with appropriate hover states and clear active indicators demonstrates UX best practices.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Button Design</h4>
+                        <p>The CTA button shows understanding of visual weight, contrast, and interactive states that encourage clicks without overwhelming the design.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Educational Value Section -->
+            <section class="section">
+                <h2>Educational Value for Web Design Students</h2>
+                <p>This project offers multiple learning opportunities for web design students, particularly in the areas of community-focused design and nonprofit/civic web development.</p>
+
+                <div class="highlight-box">
+                    <h4>Key Learning Outcomes</h4>
+                    <ul style="margin-top: 15px; line-height: 2; padding-left: 20px;">
+                        <li><strong>Purpose-Driven Design:</strong> How design choices should reflect organizational mission and values</li>
+                        <li><strong>Audience Understanding:</strong> Identifying and designing for multiple user personas with different needs</li>
+                        <li><strong>Community Building:</strong> How web design can facilitate real-world community connection and participation</li>
+                        <li><strong>Accessibility:</strong> Creating inclusive designs that welcome all skill levels and abilities</li>
+                        <li><strong>Content Strategy:</strong> Writing copy that persuades while maintaining authentic, appropriate voice</li>
+                        <li><strong>Visual Storytelling:</strong> Using imagery and color to communicate brand values without explicit statements</li>
+                        <li><strong>Conversion Optimization:</strong> Balancing information provision with clear calls-to-action</li>
+                    </ul>
+                </div>
+
+                <h3>Discussion Questions for Classroom:</h3>
+                <ul class="key-concepts">
+                    <li><strong>How would this design need to adapt</strong> if the community garden served primarily elderly residents versus young families?</li>
+                    <li><strong>What accessibility improvements</strong> could enhance this design for users with visual or cognitive disabilities?</li>
+                    <li><strong>How might the color palette change</strong> if this were an urban rooftop garden versus a suburban plot garden?</li>
+                    <li><strong>What additional features</strong> would benefit members if this site included a member portal for plot management and community messaging?</li>
+                    <li><strong>How does this design compare</strong> to corporate agricultural websites? What makes it appropriate for a community organization?</li>
+                    <li><strong>What metrics would you track</strong> to measure this website's success in achieving organizational goals?</li>
+                </ul>
+            </section>
+
+            <!-- Comparative Analysis Section -->
+            <section class="section">
+                <h2>Comparative Analysis: Community Organization Web Design</h2>
+                <p>This design exemplifies best practices for community organization websites, which face unique challenges balancing grassroots authenticity with professional credibility.</p>
+
+                <h3>Community Organization Design Principles:</h3>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>Authenticity Over Polish</h4>
+                        <p>While professional, the design avoids the slick, corporate feel that might alienate community members. It feels achievable and relatable rather than intimidatingly perfect.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Local Connection</h4>
+                        <p>The scale and intimacy of the design communicates that this is a neighborhood initiative, not a franchise or national organization—building trust through locality.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Multiple Entry Points</h4>
+                        <p>Community members can engage at various levels (rent plot, volunteer, attend events, learn), meeting people where they are rather than demanding high commitment immediately.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Value Communication</h4>
+                        <p>The design clearly articulates the value proposition (what members get) without needing aggressive sales language—appropriate for a community service organization.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final Analysis Section -->
+            <section class="section">
+                <h2>Final Analysis</h2>
+                <p>The Green Valley Community Garden website successfully demonstrates how thoughtful web design can support community-building initiatives. This project shows mastery of:</p>
+                
+                <ul style="margin-top: 20px; line-height: 2; padding-left: 20px;">
+                    <li>Strategic color psychology that reinforces brand values</li>
+                    <li>User-centered design that serves multiple audience types</li>
+                    <li>Content strategy that persuades without manipulating</li>
+                    <li>Visual hierarchy that guides without overwhelming</li>
+                    <li>Technical execution of modern web design standards</li>
+                    <li>Authentic brand voice appropriate for community organizations</li>
+                </ul>
+
+                <p style="margin-top: 20px;">Most importantly, this design understands that effective community organization websites must lower barriers to participation while building trust—achieving the delicate balance between professional credibility and approachable authenticity.</p>
+
+                <div class="highlight-box" style="margin-top: 30px;">
+                    <h4>Project Impact</h4>
+                    <p>A website like this doesn't just inform—it actively facilitates community building. By making participation seem accessible and desirable, good design directly contributes to the organization's mission. Every design decision either brings people together or creates friction; this project consistently chooses connection.</p>
+                </div>
+            </section>
+
+            <a href="projects.html" class="back-link">← Back to Portfolio</a>
+        </div>
+    </div>
+</body>
+</html>   
+    <script>
+      
+    </script>
+</body>
+</html>
